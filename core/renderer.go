@@ -11,7 +11,7 @@ type Renderer struct {
 	errorLineCount int
 }
 
-var ErrorTemplate = `{{color "red"}}{{ ErrorIcon }} Sorry, your reply was invalid: {{.Error}}{{color "reset"}}
+var ErrorTemplate = `{{color "red"}} {{ ErrorIcon }} Sorry, your reply was invalid: {{.Error}}{{color "reset"}}
 `
 
 func (r *Renderer) Error(invalid error) error {

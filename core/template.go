@@ -13,7 +13,7 @@ var DisableColor = false
 var (
 	HelpInputRune = '?'
 
-	ErrorIcon    = "✘"
+	ErrorIcon    = "×"
 	HelpIcon     = "ⓘ"
 	QuestionIcon = "?"
 
