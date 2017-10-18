@@ -3,7 +3,7 @@ package survey
 import (
 	"errors"
 
-	"gopkg.in/AlecAivazis/survey.v1/core"
+	"github.com/tj/survey/core"
 )
 
 // PageSize is the default maximum number of items to show in select/multiselect prompts

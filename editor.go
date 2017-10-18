@@ -7,8 +7,8 @@ import (
 	"os/exec"
 	"runtime"
 
-	"gopkg.in/AlecAivazis/survey.v1/core"
-	"gopkg.in/AlecAivazis/survey.v1/terminal"
+	"github.com/tj/survey/core"
+	"github.com/tj/survey/terminal"
 )
 
 /*
