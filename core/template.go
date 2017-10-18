@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"text/template"
 
-	color "github.com/aybabtme/rgbterm"
 	"github.com/mgutz/ansi"
 )
 
@@ -23,14 +22,6 @@ var (
 	SelectFocusIcon = "❯"
 )
 
-func red(s string) string {
-	return color.FgString(s, 194, 37, 92)
-}
-
-func purple(s string) string {
-	return color.FgString(s, 96, 97, 190)
-}
-
 var TemplateFuncs = map[string]interface{}{
 	// Templates with Color formatting. See Documentation: https://github.com/mgutz/ansi#style-format
 	"color": func(color string) string {
@@ -43,6 +34,8 @@ var TemplateFuncs = map[string]interface{}{
 			return "\033[38;5;61m"
 		case "red":
 			return "\033[38;5;125m"
+		case "gray", "grey":
+			return "\033[38;5;102m"
 		}
 
 		return ansi.ColorCode(color)
