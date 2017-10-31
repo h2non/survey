@@ -33,7 +33,7 @@ type InputTemplateData struct {
 // Templates with Color formatting. See Documentation: https://github.com/mgutz/ansi#style-format
 var InputQuestionTemplate = `
 {{- if .ShowHelp }}{{- color "cyan"}}{{ HelpIcon }} {{ .Help }}{{color "reset"}}{{"\n"}}{{end}}
-{{- color "default"}}   {{ .Message }} {{color "reset"}}
+{{- color "default"}}     {{ .Message }} {{color "reset"}}
 {{- if .ShowAnswer}}
   {{- color "gray"}}{{.Answer}}{{color "reset"}}{{"\n"}}
 {{- else }}
