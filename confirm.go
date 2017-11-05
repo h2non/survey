@@ -27,8 +27,7 @@ type ConfirmTemplateData struct {
 // Templates with Color formatting. See Documentation: https://github.com/mgutz/ansi#style-format
 var ConfirmQuestionTemplate = `
 {{- if .ShowHelp }}{{- color "cyan"}}{{ HelpIcon }} {{ .Help }}{{color "reset"}}{{"\n"}}{{end}}
-{{- color "green+hb"}}{{ QuestionIcon }} {{color "reset"}}
-{{- color "default+hb"}}{{ .Message }} {{color "reset"}}
+{{- color "default"}}     {{ .Message }} {{color "reset"}}
 {{- if .Answer}}
   {{- color "gray"}}{{.Answer}}{{color "reset"}}{{"\n"}}
 {{- else }}
