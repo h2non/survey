@@ -43,13 +43,13 @@ type SelectTemplateData struct {
 
 var SelectQuestionTemplate = `
 {{- if .ShowHelp }}{{- color "cyan"}}{{ HelpIcon }} {{ .Help }}{{color "reset"}}{{"\n"}}{{end}}
-{{- color "default"}}   {{ .Message }}{{color "reset"}}
+{{- color "default"}}     {{ .Message }}{{color "reset"}}
 {{- if .ShowAnswer}}{{color "gray"}} {{.Answer}}{{color "reset"}}{{"\n"}}
 {{- else}}
   {{- if and .Help (not .ShowHelp)}} {{color "cyan"}}[{{ HelpInputRune }} for help]{{color "reset"}}{{end}}
-  {{- "\n"}}
+  {{"\n"}}
   {{- range $ix, $choice := .PageEntries}}
-    {{- if eq $ix $.SelectedIndex}}{{color "default"}}   {{ SelectFocusIcon }} {{else}}   {{color "gray"}}  {{end}}
+    {{- if eq $ix $.SelectedIndex}}{{color "default"}}     {{ SelectFocusIcon }} {{else}}     {{color "gray"}}  {{end}}
     {{- $choice}}
     {{- color "reset"}}{{"\n"}}
   {{- end}}
