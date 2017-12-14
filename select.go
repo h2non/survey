@@ -47,7 +47,7 @@ var SelectQuestionTemplate = `
 {{- if .ShowAnswer}}{{color "gray"}} {{.Answer}}{{color "reset"}}{{"\n"}}
 {{- else}}
   {{- if and .Help (not .ShowHelp)}} {{color "cyan"}}[{{ HelpInputRune }} for help]{{color "reset"}}{{end}}
-  {{"\n"}}
+  {{- "\n"}}
   {{- range $ix, $choice := .PageEntries}}
     {{- if eq $ix $.SelectedIndex}}{{color "default"}}     {{ SelectFocusIcon }} {{else}}     {{color "gray"}}  {{end}}
     {{- $choice}}
