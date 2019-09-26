@@ -29,9 +29,18 @@ type PasswordTemplateData struct {
 // Templates with Color formatting. See Documentation: https://github.com/mgutz/ansi#style-format
 var PasswordQuestionTemplate = `
 {{- if .ShowHelp }}{{- color "cyan"}}{{ HelpIcon }} {{ .Help }}{{color "reset"}}{{"\n"}}{{end}}
-{{- color "green+hb"}}{{ QuestionIcon }} {{color "reset"}}
-{{- color "default+hb"}}{{ .Message }} {{color "reset"}}
-{{- if and .Help (not .ShowHelp)}}{{color "cyan"}}[{{ HelpInputRune }} for help]{{color "reset"}} {{end}}`
+{{- color "default"}}     {{ .Message }} {{color "reset"}}
+{{- if .ShowAnswer}}
+  {{- color "gray"}}{{.Answer}}{{color "reset"}}{{"\n"}}
+{{- else }}
+  {{- if and .Help (not .ShowHelp)}}{{color "cyan"}}[{{ HelpInputRune }} for help]{{color "reset"}} {{end}}
+  {{- if .Default}}{{color "white"}}({{.Default}}) {{color "reset"}}{{end}}
+{{- end}}`
+
+// {{- if .ShowHelp }}{{- color "cyan"}}{{ HelpIcon }} {{ .Help }}{{color "reset"}}{{"\n"}}{{end}}
+// {{- color "green+hb"}}{{ QuestionIcon }} {{color "reset"}}
+// {{- color "default+hb"}}{{ .Message }} {{color "reset"}}
+// {{- if and .Help (not .ShowHelp)}}{{color "cyan"}}[{{ HelpInputRune }} for help]{{color "reset"}} {{end}}
 
 func (p *Password) Prompt() (line interface{}, err error) {
 	// render the question template
