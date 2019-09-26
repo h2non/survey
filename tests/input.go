@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/tj/survey"
-	"github.com/tj/survey/tests/util"
+	"github.com/h2non/survey"
+	"github.com/h2non/survey/tests/util"
 )
 
 var val = ""

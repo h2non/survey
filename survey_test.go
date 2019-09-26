@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/tj/survey/core"
+	"github.com/h2non/survey/core"
 )
 
 func init() {

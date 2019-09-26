@@ -1,6 +1,6 @@
 language: go
 
-go_import_path: github.com/tj/survey
+go_import_path: github.com/h2non/survey
 
 before_install:
   - go get github.com/AlecAivazis/run

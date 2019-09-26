@@ -7,8 +7,8 @@ import (
 	"os/exec"
 	"runtime"
 
-	"github.com/tj/survey/core"
-	"github.com/tj/survey/terminal"
+	"github.com/h2non/survey/core"
+	"github.com/h2non/survey/terminal"
 )
 
 /*

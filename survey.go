@@ -3,7 +3,7 @@ package survey
 import (
 	"errors"
 
-	"github.com/tj/survey/core"
+	"github.com/h2non/survey/core"
 )
 
 // PageSize is the default maximum number of items to show in select/multiselect prompts

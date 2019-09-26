@@ -1,6 +1,6 @@
 # Survey
 [![Build Status](https://travis-ci.org/AlecAivazis/survey.svg?branch=feature%2Fpretty)](https://travis-ci.org/AlecAivazis/survey)
-[![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg)](https://godoc.org/github.com/tj/survey)
+[![GoDoc](http://img.shields.io/badge/godoc-reference-5272B4.svg)](https://godoc.org/github.com/h2non/survey)
 
 A library for building interactive prompts. Heavily inspired by the great [inquirer.js](https://github.com/SBoudrias/Inquirer.js/).
 
@@ -11,7 +11,7 @@ package main
 
 import (
     "fmt"
-    "github.com/tj/survey"
+    "github.com/h2non/survey"
 )
 
 // the questions to ask
@@ -78,7 +78,7 @@ Examples can be found in the `examples/` directory. Run them
 to see basic behavior:
 
 ```bash
-go get github.com/tj/survey
+go get github.com/h2non/survey
 
 # ... navigate to the repo in your GOPATH
 
@@ -227,8 +227,8 @@ looks for by setting the `HelpInputRune` variable in `survey/core`:
 ```golang
 
 import (
-    "github.com/tj/survey"
-    surveyCore "github.com/tj/survey/core"
+    "github.com/h2non/survey"
+    surveyCore "github.com/h2non/survey/core"
 )
 
 number := ""
@@ -294,5 +294,5 @@ to maintain those releasees. Importing v1 of survey could look something like
 ```golang
 package main
 
-import "github.com/tj/survey"
+import "github.com/h2non/survey"
 ```

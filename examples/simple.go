@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/tj/survey"
+	"github.com/h2non/survey"
 )
 
 // the questions to ask

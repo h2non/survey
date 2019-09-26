@@ -1,4 +1,4 @@
-module github.com/tj/survey
+module github.com/h2non/survey
 
 go 1.12
 
